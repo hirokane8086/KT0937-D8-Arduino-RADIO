@@ -142,7 +142,6 @@ uint8_t regx ;
     WriteRegister (RADIO , 0x07, DIVIDERN_L);
 
     regx = ReadRegister (RADIO , 0x08 ) ;
-    WriteRegister (RADIO , 0x08 , regx | 0b00001000) ;
     WriteRegister (RADIO , 0x08, (regx & 0xF0) | FPFD_H);
     WriteRegister (RADIO , 0x09, FPFD_M);
     WriteRegister (RADIO , 0x0A, FPFD_L);
